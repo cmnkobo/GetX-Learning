@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeRoute extends StatelessWidget {
-  const HomeRoute({super.key});
+class HomeNamedRoute extends StatelessWidget {
+  const HomeNamedRoute({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('This is home'),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
+        title: const Text('Home'),
+        backgroundColor: Colors.cyan,
       ),
       body: Center(
         child: Column(
@@ -18,38 +17,33 @@ class HomeRoute extends StatelessWidget {
           children: [
             Text(
               'This is Home Screen',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                    color: Colors.purpleAccent,
+                  ),
             ),
             const SizedBox(
               height: 10,
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                foregroundColor: Colors.white,
+                backgroundColor: Colors.cyanAccent,
               ),
-              onPressed: () {},
-              child: const Text('Next Slide'),
+              onPressed: () {
+                Get.toNamed('/nextScreen/1234');
+              },
+              child: const Text('Next Screen'),
             ),
             const SizedBox(
               height: 10,
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                foregroundColor: Colors.white,
+                backgroundColor: Colors.cyanAccent,
               ),
               onPressed: () {
                 Get.back();
               },
-              child: const Text('Back to Main'),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-              Get.arguments,
-              style: Theme.of(context).textTheme.headlineSmall,
+              child: const Text('Main Screen'),
             ),
           ],
         ),

@@ -31,7 +31,7 @@ class RouteApp extends StatelessWidget {
                 onPressed: () {
                   Get.to(
                     const HomeRoute(),
-                    arguments: 'Data from MainScreen',
+                    arguments: 'Data from MainScreen, tested',
                     fullscreenDialog: true,
                     transition: Transition.zoom,
                     duration: const Duration(milliseconds: 1000),
