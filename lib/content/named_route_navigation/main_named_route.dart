@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gettxx/content/named_route_navigation/home_screen.dart';
 import 'package:gettxx/content/named_route_navigation/next_screen.dart';
+import 'package:gettxx/content/named_route_navigation/unknown_route_named.dart';
 
 void main() {
   runApp(const MainNamedRoute());
@@ -31,6 +32,10 @@ class MainNamedRoute extends StatelessWidget {
       ],
       defaultTransition: Transition.circularReveal,
       transitionDuration: const Duration(milliseconds: 1000),
+      unknownRoute: GetPage(
+        name: '/notfound',
+        page: () => const UnknownRoute(),
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Named Route Navigation'),

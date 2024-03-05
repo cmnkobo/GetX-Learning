@@ -41,7 +41,7 @@ class HomeNamedRoute extends StatelessWidget {
                 backgroundColor: Colors.cyanAccent,
               ),
               onPressed: () {
-                Get.back();
+                Get.toNamed('/x');
               },
               child: const Text('Main Screen'),
             ),
