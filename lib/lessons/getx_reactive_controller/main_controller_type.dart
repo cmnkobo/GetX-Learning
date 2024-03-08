@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxx/lessons/getx_type_controller/type_controller.dart';
+import 'package:getxx/lessons/getx_reactive_controller/type_controller.dart';
 
 void main() {
   runApp(const MainType());
