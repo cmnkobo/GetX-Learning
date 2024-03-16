@@ -31,7 +31,7 @@ class LifeCycleMain extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GetBuilder<LifeCycleController>(
-                initState: (state) => lifecontroller.count,
+                initState: (state) => lifecontroller.lifeIncrement(),
                 dispose: (_) => lifecontroller.cleanUpTask(),
                 builder: (controller) => Text(
                   'The value is ${lifecontroller.count}',
