@@ -6,15 +6,9 @@ class CycleController extends GetxController {
   var count = 0;
 
   void cycleIncrement() async {
-    Timer.periodic(Duration(seconds: 3), (timer) {
-      count++;
-      update();
-    });
-    // await Future<int>.delayed(
-    //   const Duration(milliseconds: 4),
-    // );
-    // count++;
-    // update();
+    await Future<int>.delayed(
+      const Duration(seconds: 3),
+    );
   }
 
   void cleanUpTask() {

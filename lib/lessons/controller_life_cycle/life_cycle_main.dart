@@ -31,10 +31,10 @@ class LifeCycleMain extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GetBuilder<CycleController>(
-                // initState: (state) => cycleController,
-                // dispose: (_) => cycleController.cleanUpTask(),
+                initState: (state) => cycleController,
+                dispose: (_) => cycleController.cleanUpTask(),
                 builder: (controller) => Text(
-                  'The value is ${controller.count.toInt()}',
+                  'The value is ${cycleController.count}',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
