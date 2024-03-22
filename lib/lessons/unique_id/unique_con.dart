@@ -6,5 +6,6 @@ class UniqueIdController extends GetxController {
   void increment() {
     count++;
     update(['txtCount']);
+    update();
   }
 }

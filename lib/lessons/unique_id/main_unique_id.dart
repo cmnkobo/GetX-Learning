@@ -10,7 +10,7 @@ void main(List<String> args) {
 class MainUniqueId extends StatelessWidget {
   MainUniqueId({super.key});
 
-  UniqueIdController uniqueIdController = UniqueIdController();
+  UniqueIdController uniqueIdController = Get.put(UniqueIdController());
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +32,13 @@ class MainUniqueId extends StatelessWidget {
               GetBuilder<UniqueIdController>(
                 id: 'txtCount',
                 builder: (controller) => Text(
-                  'This is 0',
+                  'This is ${uniqueIdController.count}',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
               GetBuilder<UniqueIdController>(
                 builder: (controller) => Text(
-                  'The value is 0',
+                  'The value is ${uniqueIdController.count}',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
@@ -46,7 +46,9 @@ class MainUniqueId extends StatelessWidget {
                 height: 10,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  uniqueIdController.increment();
+                },
                 child: const Text('Increment'),
               )
             ],
