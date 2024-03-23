@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gettxx/content/controller_id/cont_id.dart';
+import 'package:gettxx/content/unique_id/cont_id.dart';
 
 void main() {
   runApp(MainCourse());
