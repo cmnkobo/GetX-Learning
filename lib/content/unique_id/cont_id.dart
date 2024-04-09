@@ -5,7 +5,7 @@ class MainCourseController extends GetxController {
 
   void increment() {
     count++;
-//update(['txtCount']);
+    update(['txtCount']);
     update();
   }
 }
