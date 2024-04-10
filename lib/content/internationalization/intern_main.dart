@@ -69,7 +69,7 @@ class InternationalizationMain extends StatelessWidget {
                 child: const Text('English'),
               ),
               const SizedBox(
-                height: 10,
+                height: 11,
               ),
               ElevatedButton(
                 onPressed: () {
